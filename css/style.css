@@ -4,16 +4,16 @@
    ═══════════════════════════════════════════════════════════════ */
 
 /* ── Google Fonts Import ── */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ── CSS Custom Properties ── */
 :root {
   /* Color Palette */
-  --color-cream:        #F5F0E8;
-  --color-cream-light:  #FAF8F3;
-  --color-ivory:        #FEFDFB;
-  --color-marble:       #EDE8DD;
-  --color-marble-dark:  #D4CCBB;
+  --color-cream:        #FFFFFF;
+  --color-cream-light:  #FDFDFD;
+  --color-ivory:        #FFFFFF;
+  --color-marble:       #F5F3F0;
+  --color-marble-dark:  #E0DCD6;
 
   --color-olive:        #4A5D3A;
   --color-olive-dark:   #3A4A2E;
@@ -22,10 +22,10 @@
   --color-sage:         #7A8B6F;
   --color-sage-light:   #A3B396;
 
-  --color-gold:         #B8963E;
-  --color-gold-light:   #D4AF5A;
-  --color-gold-dark:    #8B7230;
-  --color-bronze:       #A07830;
+  --color-gold:         #8B1A2B;
+  --color-gold-light:   #A62D42;
+  --color-gold-dark:    #6B1520;
+  --color-bronze:       #7A1825;
 
   --color-charcoal:     #2A2A28;
   --color-charcoal-light: #3D3D3A;
@@ -38,11 +38,11 @@
 
   --color-success:      #4A7D3A;
   --color-error:        #A03030;
-  --color-warning:      #B8963E;
+  --color-warning:      #8B1A2B;
 
   /* Typography */
-  --font-serif:     'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
-  --font-serif-alt: 'Cormorant', 'Georgia', serif;
+  --font-serif:     'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+  --font-serif-alt: 'Montserrat', 'Helvetica Neue', sans-serif;
   --font-sans:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Font Sizes — Fluid */
@@ -169,17 +169,17 @@ input, textarea, select {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.15;
   color: var(--color-charcoal);
 }
 
-h1 { font-size: var(--text-5xl); }
-h2 { font-size: var(--text-4xl); }
-h3 { font-size: var(--text-3xl); }
-h4 { font-size: var(--text-2xl); }
-h5 { font-size: var(--text-xl);  }
-h6 { font-size: var(--text-lg);  }
+h1 { font-size: var(--text-5xl); font-weight: 800; }
+h2 { font-size: var(--text-4xl); font-weight: 700; }
+h3 { font-size: var(--text-3xl); font-weight: 700; }
+h4 { font-size: var(--text-2xl); font-weight: 600; }
+h5 { font-size: var(--text-xl); font-weight: 600; }
+h6 { font-size: var(--text-lg); font-weight: 600; }
 
 p {
   margin-bottom: 1em;
@@ -188,7 +188,7 @@ p {
 
 /* ── Selection ── */
 ::selection {
-  background: var(--color-olive);
+  background: var(--color-gold);
   color: var(--color-cream);
 }
 
@@ -478,6 +478,12 @@ p {
   height: 100%;
 }
 
+.nav__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .nav__logo-text {
   display: flex;
   flex-direction: column;
@@ -617,6 +623,7 @@ p {
 .nav__mobile .nav__link {
   font-family: var(--font-serif);
   font-size: var(--text-3xl);
+  font-weight: 700;
   color: var(--color-cream);
   letter-spacing: 0.05em;
   text-transform: none;
@@ -734,7 +741,7 @@ p {
 
 .hero__title em {
   font-style: italic;
-  color: var(--color-gold);
+  color: var(--color-gold-light);
 }
 
 .hero__title .line {
@@ -1892,6 +1899,12 @@ p {
 .footer__logo svg {
   width: 40px;
   height: 40px;
+}
+
+.footer__logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .footer__logo-name {
