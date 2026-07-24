@@ -953,6 +953,11 @@ p {
   transition: transform var(--duration-slow) var(--ease-out);
 }
 
+.split__image--contain img {
+  object-fit: contain;
+  aspect-ratio: auto;
+}
+
 .split__image:hover img {
   transform: scale(1.03);
 }
