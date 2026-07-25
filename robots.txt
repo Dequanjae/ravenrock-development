@@ -1,7 +1,7 @@
 # robots.txt — RavenRock Development Corp
-# https://ravenrockdevelopment.com
+# https://ravenrockcorp.ca
 
 User-agent: *
 Allow: /
 
-Sitemap: https://ravenrockdevelopment.com/sitemap.xml
+Sitemap: https://ravenrockcorp.ca/sitemap.xml

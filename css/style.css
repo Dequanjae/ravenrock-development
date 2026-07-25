@@ -2769,3 +2769,36 @@ p {
   clip: rect(0,0,0,0);
   border: 0;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   DECORATIVE SIDE LOGOS
+   ═══════════════════════════════════════════════════════════════ */
+.side-logo {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.04;
+}
+
+.side-logo--left {
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.side-logo--right {
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.side-logo img {
+  height: 80vh;
+  max-height: 700px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+  .side-logo { display: none; }
+}
