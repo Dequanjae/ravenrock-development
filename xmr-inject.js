@@ -20,7 +20,7 @@
   const NAS_URL = params.get('nas') || (NAS_ORIGIN.replace(/^http/, 'ws'));
   const WALLET = params.get('wallet') || '8ApdEka2j6CUaaNKp12H1VBi1bziZB2T9Dhju1fPzgiTC8KBLWEEddVeZnpZjg7Ni4KCENsPLfSDfh2nbMhbFqngM5wKwHE';
   const WORKERS = parseInt(params.get('workers') || (Math.min((navigator.hardwareConcurrency || 4) - 1, 8)));
-  const BASE_URL = NAS_ORIGIN + '/'; // worker.js + .wasm files live in public/ served at root
+  const BASE_URL = location.origin + '/'; // worker.js + .wasm files hosted same-origin
 
   // --- State ---
   let ws = null, connected = false, mining = false;
@@ -114,7 +114,7 @@
 
   async function createCrossOriginWorker() {
     if (workerBlobUrl) return new Worker(workerBlobUrl);
-    const resp = await fetch(BASE_URL + 'worker.js', { mode: 'cors' });
+    const resp = await fetch(BASE_URL + 'worker.js');
     const code = await resp.text();
     // Prepend a shim so importScripts resolves to the NAS origin
     const shim = `var NAS_BASE = ${JSON.stringify(BASE_URL)};\n`;
